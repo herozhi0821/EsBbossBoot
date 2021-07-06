@@ -1,0 +1,213 @@
+<properties>
+    <!-- 创建索引表结构 -->
+    <property name="createProInfo">
+        <![CDATA[{
+		    "settings": {
+		        "number_of_shards": 1,
+		        "number_of_replicas": 0,
+		        "analysis": {
+		            "filter": {
+		                "my_shingle_filter": {
+		                    "type": "shingle",
+		                    "min_shingle_size": 4,
+		                    "max_shingle_size": 7,
+		                    "output_unigrams": false
+		                },
+		                "my_stemmer": {
+		                    "type": "stemmer",
+		                    "name": "english"
+		                }
+		            },
+		            "analyzer": {
+		                "name_analyzer": {
+		                    "tokenizer": "name_tokenizer"
+		                },
+		                "content_analyzer": {
+		                    "type": "custom",
+		                    "tokenizer": "ik_smart",
+		                    "filter": [
+		                        "lowercase",
+		                        "my_stemmer",
+		                        "my_shingle_filter"
+		                    ]
+		                }
+		            },
+		            "tokenizer": {
+		                "name_tokenizer": {
+		                    "type": "pattern",
+		                    "pattern": "\\;"
+		                }
+		            }
+		        }
+		    },
+		    "mappings": {
+		        ##升级到es7.0之后不支持type "projdoc": {
+		        ##    "_all": {
+		        ##        "enabled": "false"
+		        ##    },
+		            "properties": {
+		                "id": {
+		                    "type": "keyword",
+		                    "store": "true"
+		                },
+		                "filename": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectname": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectmember": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "name_analyzer",
+		                    "search_analyzer": "name_analyzer"
+		                },
+		                "allContent": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "researchOne": {
+                            "type": "text",
+                            "term_vector": "no",
+                            "store": "true",
+                            "analyzer": "content_analyzer",
+                            "search_analyzer": "content_analyzer"
+                        },
+		                "createTime": {
+		                    "type": "date",
+		                    "store": "true",
+		                    "format": "yyyy-MM-dd HH:mm:ss.SSS"
+		                }
+		            }
+		       ## }
+		    }
+		}]]>
+    </property>
+    
+    <!-- 根据ID查询 -->
+    <property name="searchProById">
+        <![CDATA[{
+            "query": {
+                "match": {
+                   "_id": #[condition]
+                }
+            }
+        }]]>
+    </property>
+    
+    <!--  -->
+    <property name="searchDatas">
+        <![CDATA[{
+            "query": {
+                "bool": {
+                    "filter": [
+                        {
+                            "terms": {
+                                "projectname.keyword": [#[projectname1],#[projectname2]]
+                            }
+                        },
+                        {
+                            "range": {
+                                "createTime": {
+                                    "gte": #[startTime],
+                                    "lt": #[endTime]
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "size":1000
+        }]]>
+    </property>
+   
+   <!-- 精确指定内容查询 -->
+    <property name="proHighSearch">
+        <![CDATA[{
+		   "query":{
+		     "match_phrase": {
+		       #[coml]:{
+		         "query" : #[cont],
+		         "slop": 0
+		       }
+		     }
+		   },
+		   "sort":[
+		     {
+		       "createTime":"desc"
+		     }
+		    ],
+		   "size":1000,
+		   "highlight":{
+		     "require_field_match": #[isall],
+		     "pre_tags": ["<span>"],
+		     "post_tags": ["</span>"],
+		     "fields": {
+		       "*":{}
+		     }
+		   }
+		}]]>
+    </property>
+    
+    <!--
+        一个简单的检索dsl,中有四个变量
+        name 全文检索字段
+        startTime
+        endTime
+        通过map传递变量参数值
+    -->
+    <property name="testHighlightSearch">
+        <![CDATA[{
+		    "query": {
+		        "bool": {
+		            "filter": [
+		                {   
+		                    "range": {
+		                        "createTime": {
+		                            "gte": #[startTime],
+		                            "lt": #[endTime]
+		                        }
+		                    }
+		                }
+		            ],
+		            "must": [
+		                {
+		                    "match_phrase" : {
+		                        #[coml] : {
+		                            "query" : #[cont]
+		                        }
+		                    }
+		                }
+		            ]
+		        }
+		    },
+		    "sort":[
+		       {
+		         "createTime":"desc"
+		       }
+		    ],
+		    "size":1000,
+		    "highlight": {
+		        "require_field_match": #[isall],
+		        "pre_tags": ["<mark>"],
+		        "post_tags": ["</mark>"],
+		        "fields": {
+		            "*": {}
+		        },
+		        "fragment_size": 100
+		    }
+		}]]>
+    </property>
+</properties>

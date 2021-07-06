@@ -1,0 +1,552 @@
+2021-07-06 16:41:13.331 [restartedMain] INFO  net.cnki.EsBbossBootApplication -[logStarting] Line:55 - Starting EsBbossBootApplication using Java 11.0.11 on ZhiPengyu with PID 2340 (D:\Workspaces\eclipse-workspace\EsBbossBoot\target\classes started by ZhiPengyu in D:\Workspaces\eclipse-workspace\EsBbossBoot)
+2021-07-06 16:41:13.401 [restartedMain] INFO  net.cnki.EsBbossBootApplication -[logStartupProfileInfo] Line:659- No active profile set, falling back to default profiles: default
+2021-07-06 16:41:18.857 [restartedMain] INFO  o.frameworkset.spi.remote.http.ClientConfiguration -[makeDefualtClientConfiguration] Line:968- Http Pool[default] config:http.authAccount=null,http.authPassword=null,http.encodedAuthCharset=US-ASCII,http.timeoutConnection=50000,http.timeoutSocket=50000,http.connectionRequestTimeout=50000,http.retryTime=1,http.automaticRetriesDisabled=false,http.backoffAuth=false,http.retryInterval=-1,http.maxLineLength=-1,http.maxHeaderCount=200,http.maxTotal=400,http.soReuseAddress=false,http.soKeepAlive=false,http.timeToLive=3600000,http.keepAlive=3600000,http.defaultMaxPerRoute=200,http.validateAfterInactivity=-1,http.staleConnectionCheckEnabled=false,http.customHttpRequestRetryHandler=null,http.keystore=null,http.keystoreAlias=null,http.keyPassword=null,http.truststore=null,http.truststoreAlias=null,http.trustPassword=null,http.pemCert=null,http.pemtrustedCA=null,http.pemKey=null,http.pemkeyPassword=null,http.hostnameVerifier=null,http.supportedProtocols=TLSv1.2,TLSv1.1,TLSv1,http.httpClientBuilderCallback=null,http.evictExpiredConnections=true,http.routing=null,http.health=null,http.discoverService=null,http.hosts=null,http.failAllContinue=true,http.healthCheckInterval=null,http.discoverServiceInterval=null,http.handleNullOrEmptyHostsByDiscovery=null,http.hosts=null,http.health=null,http.healthCheckInterval=3000,http.failAllContinue=true,http.discoverServiceInterval=10000,http.handleNullOrEmptyHostsByDiscovery=false
+2021-07-06 16:41:20.477 [restartedMain] INFO  o.f.spi.remote.http.proxy.HttpServiceHosts -[after] Line:185- HttpProxy server Http pool[default] healthCheck is disabled,you can set HttpProxy http.healthCheckInterval (>0) and http.health in configfile to enabled healthCheck.
+2021-07-06 16:41:20.477 [restartedMain] INFO  o.f.spi.remote.http.proxy.HttpServiceHosts -[after] Line:211- Discover Http pool[default] is disabled,to enabled set http.discoverService in configfile.
+2021-07-06 16:41:20.478 [restartedMain] INFO  o.frameworkset.spi.remote.http.ClientConfiguration -[makeDefualtClientConfiguration] Line:968- Http Pool[__healthCheck_default] config:http.authAccount=null,http.authPassword=null,http.encodedAuthCharset=US-ASCII,http.timeoutConnection=50000,http.timeoutSocket=50000,http.connectionRequestTimeout=50000,http.retryTime=1,http.automaticRetriesDisabled=false,http.backoffAuth=false,http.retryInterval=-1,http.maxLineLength=-1,http.maxHeaderCount=200,http.maxTotal=500,http.soReuseAddress=false,http.soKeepAlive=false,http.timeToLive=3600000,http.keepAlive=3600000,http.defaultMaxPerRoute=50,http.validateAfterInactivity=-1,http.staleConnectionCheckEnabled=false,http.customHttpRequestRetryHandler=null,http.keystore=null,http.keystoreAlias=null,http.keyPassword=null,http.truststore=null,http.truststoreAlias=null,http.trustPassword=null,http.pemCert=null,http.pemtrustedCA=null,http.pemKey=null,http.pemkeyPassword=null,http.hostnameVerifier=null,http.supportedProtocols=TLSv1.2,TLSv1.1,TLSv1,http.httpClientBuilderCallback=null,http.evictExpiredConnections=true
+2021-07-06 16:41:20.479 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearchHelper -[initDslFileRefreshInterval] Line:327- dslfile.refreshInterval -1 ms
+2021-07-06 16:41:20.479 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearchHelper -[initDslFileRefreshInterval] Line:328- dslfile.dslMappingDir null
+2021-07-06 16:41:20.509 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearch -[configureWithConfigContext] Line:268- Start Elasticsearch Datasource[default] from springboot[true]:{"elasticPassword":"","elasticsearch.scrollBlockedWaitTimeout":"0","elasticsearch.client":"restful","elasticsearch.timeZone":"Asia/Shanghai","elasticsearch.failAllContinue":"true","elasticUser":"","elasticsearch.dateFormat":"yyyy.MM.dd","elasticsearch.sliceScrollThreadCount":"50","elasticsearch.showTemplate":"true","elasticsearch.ttl":"2d","elasticsearch.scrollThreadQueue":"200","elasticsearch.version":"7.0.0","elasticsearch.healthCheckInterval":"3000","elasticsearch.sliceScrollBlockedWaitTimeout":"0","elasticsearch.scrollThreadCount":"50","elasticsearch.includeTypeName":"false","elasticsearch.rest.hostNames":"127.0.0.1:9200","elasticsearch.sliceScrollThreadQueue":"100","elasticsearch.discoverHost":"false","elasticsearch.httpPool":"default"}
+2021-07-06 16:41:20.548 [restartedMain] INFO  o.f.elasticsearch.TimeBasedIndexNameBuilder -[configure] Line:77 - dateFormatString = yyyy.MM.dd,timeZoneString=Asia/Shanghai,indexPrefix=null
+2021-07-06 16:41:20.549 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearchHelper -[booter] Line:218- Geo ipinfo config {"ip.cachesize":"10000","ip.database":"","ip.serviceUrl":"","ip.asnDatabase":"","ip.ispConverter":"","ip.ip2regionDatabase":""},from springboot:true
+2021-07-06 16:41:20.550 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearch -[start] Line:439- Start ElasticSearch rest client:127.0.0.1:9200
+2021-07-06 16:41:20.552 [restartedMain] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[init] Line:305- Start Elasticsearch healthCheck thread,you can set elasticsearch.healthCheckInterval=-1 in ElasticSearch Configs to disable healthCheck thread.
+2021-07-06 16:41:22.760 [restartedMain] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[handleResponse] Line:242- Elasticsearch Server Info:
+{
+  "name" : "ZHIPENGYU",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "8_QJvQKdSwqi4Qm01rTe3w",
+  "version" : {
+    "number" : "7.13.2",
+    "build_flavor" : "default",
+    "build_type" : "zip",
+    "build_hash" : "4d960a0733be83dd2543ca018aa4ddc42e956800",
+    "build_date" : "2021-06-10T21:01:55.251515791Z",
+    "build_snapshot" : false,
+    "lucene_version" : "8.8.2",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+2021-07-06 16:41:22.785 [restartedMain] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[init] Line:325- Discover Elasticsearch Host is disabled,to enabled set elasticsearch.discoverHost=true  in ElasticSearch Configs.
+2021-07-06 16:41:22.785 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearch -[start] Line:444- ElasticSearch rest client started.
+2021-07-06 16:41:24.243 [restartedMain] INFO  net.cnki.EsBbossBootApplication -[logStarted] Line:61 - Started EsBbossBootApplication in 13.728 seconds (JVM running for 17.915)
+2021-07-06 16:42:27.106 [http-nio-9092-exec-1] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc/_mapping/projdoc,retry:0
+2021-07-06 16:42:27.854 [http-nio-9092-exec-1] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0
+2021-07-06 16:43:08.286 [http-nio-9092-exec-4] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:723- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc/projdoc/1,retry:0,request body:
+{"filename":"文件名","projectname":"项目名","projectmember":"参与人员","allContent":"海洋平台结构长期服役在恶劣的海洋环境中，并受到各种载荷的交互作用，如风载荷、海流、波浪载荷、冰载荷等，有时还要遭受到地震、台风、海啸、船碰撞等意外灾害，结构本身还要遭受环境腐蚀、海洋生物附着、海底冲刷等的影响。在这些恶劣的环境载荷的长期作用下，容易产生各种形式的损伤，使结构的承载能力下降，对平台构成潜在威胁，严重的还会导致平台失效。如1980年3月27日，挪威“亚历山大·基兰”号钻井平台在9级海风作用下一根支柱发生断裂，平台15分钟后沉入海底，123人遇难。海洋平台结构长期服役在恶劣的海洋环境中，并受到各种载荷的交互作用，如风载荷、海流、波浪载荷、冰载荷等，有时还要遭受到地震、台风、海啸、船碰撞等意外灾害，结构本身还要遭受环境腐蚀、海洋生物附着、海底冲刷等的影响。在这些恶劣的环境载荷的长期作用下，容易产生各种形式的损伤，使结构的承载能力下降，对平台构成潜在威胁，严重的还会导致平台失效。如1980年3月27日，挪威“亚历山大·基兰”号钻井平台在9级海风作用下一根支柱发生断裂，平台15分钟后沉入海底，123人遇难。","researchOne":"海洋平台结构长期服役在恶劣的海洋环境中，并受到各种载荷的交互作用，如风载荷、海流、波浪载荷、冰载荷等，有时还要遭受到地震、台风、海啸、船碰撞等意外灾害，结构本身还要遭受环境腐蚀、海洋生物附着、海底冲刷等的影响。在这些恶劣的环境载荷的长期作用下，容易产生各种形式的损伤，使结构的承载能力下降，对平台构成潜在威胁，严重的还会导致平台失效。如1980年3月27日，挪威“亚历山大·基兰”号钻井平台在9级海风作用下一根支柱发生断裂，平台15分钟后沉入海底，123人遇难。","createTime":"2021-07-06 08:43:08.122"}
+2021-07-06 16:45:07.559 [http-nio-9092-exec-5] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:723- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc/projdoc/1,retry:0,request body:
+{"filename":"文件名","projectname":"项目名","projectmember":"参与人员","allContent":"海洋平台结构长期服役在恶劣的海洋环境中，并受到各种载荷的交互作用，如风载荷、海流、波浪载荷、冰载荷等，有时还要遭受到地震、台风、海啸、船碰撞等意外灾害，结构本身还要遭受环境腐蚀、海洋生物附着、海底冲刷等的影响。在这些恶劣的环境载荷的长期作用下，容易产生各种形式的损伤，使结构的承载能力下降，对平台构成潜在威胁，严重的还会导致平台失效。如1980年3月27日，挪威“亚历山大·基兰”号钻井平台在9级海风作用下一根支柱发生断裂，平台15分钟后沉入海底，123人遇难。海洋平台结构长期服役在恶劣的海洋环境中，并受到各种载荷的交互作用，如风载荷、海流、波浪载荷、冰载荷等，有时还要遭受到地震、台风、海啸、船碰撞等意外灾害，结构本身还要遭受环境腐蚀、海洋生物附着、海底冲刷等的影响。在这些恶劣的环境载荷的长期作用下，容易产生各种形式的损伤，使结构的承载能力下降，对平台构成潜在威胁，严重的还会导致平台失效。如1980年3月27日，挪威“亚历山大·基兰”号钻井平台在9级海风作用下一根支柱发生断裂，平台15分钟后沉入海底，123人遇难。","researchOne":"海洋平台结构长期服役在恶劣的海洋环境中，并受到各种载荷的交互作用，如风载荷、海流、波浪载荷、冰载荷等，有时还要遭受到地震、台风、海啸、船碰撞等意外灾害，结构本身还要遭受环境腐蚀、海洋生物附着、海底冲刷等的影响。在这些恶劣的环境载荷的长期作用下，容易产生各种形式的损伤，使结构的承载能力下降，对平台构成潜在威胁，严重的还会导致平台失效。如1980年3月27日，挪威“亚历山大·基兰”号钻井平台在9级海风作用下一根支柱发生断裂，平台15分钟后沉入海底，123人遇难。","createTime":"2021-07-06 08:45:07.558"}
+2021-07-06 16:47:42.773 [http-nio-9092-exec-7] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0
+2021-07-06 16:47:42.776 [http-nio-9092-exec-7] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:723- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0,request body:
+{
+		    "settings": {
+		        "number_of_shards": 1,
+		        "number_of_replicas": 0,
+		        "analysis": {
+		            "filter": {
+		                "my_shingle_filter": {
+		                    "type": "shingle",
+		                    "min_shingle_size": 4,
+		                    "max_shingle_size": 7,
+		                    "output_unigrams": false
+		                },
+		                "my_stemmer": {
+		                    "type": "stemmer",
+		                    "name": "english"
+		                }
+		            },
+		            "analyzer": {
+		                "name_analyzer": {
+		                    "tokenizer": "name_tokenizer"
+		                },
+		                "content_analyzer": {
+		                    "type": "custom",
+		                    "tokenizer": "ik_smart",
+		                    "filter": [
+		                        "lowercase",
+		                        "my_stemmer",
+		                        "my_shingle_filter"
+		                    ]
+		                }
+		            },
+		            "tokenizer": {
+		                "name_tokenizer": {
+		                    "type": "pattern",
+		                    "pattern": "\\;"
+		                }
+		            }
+		        }
+		    },
+		    "mappings": {
+		        "projdoc": {
+		            "_all": {
+		                "enabled": "false"
+		            },
+		            "properties": {
+		                "id": {
+		                    "type": "keyword",
+		                    "store": "true"
+		                },
+		                "filename": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectname": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectmember": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "name_analyzer",
+		                    "search_analyzer": "name_analyzer"
+		                },
+		                "allContent": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "researchOne": {
+                            "type": "text",
+                            "term_vector": "no",
+                            "store": "true",
+                            "analyzer": "content_analyzer",
+                            "search_analyzer": "content_analyzer"
+                        },
+		                "createTime": {
+		                    "type": "date",
+		                    "store": "true",
+		                    "format": "yyyy-MM-dd HH:mm:ss.SSS"
+		                }
+		            }
+		        }
+		    }
+		}
+2021-07-06 17:01:49.314 [http-nio-9092-exec-9] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0
+2021-07-06 17:01:49.320 [http-nio-9092-exec-9] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:723- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0,request body:
+{
+		    "settings": {
+		        "number_of_shards": 1,
+		        "number_of_replicas": 0,
+		        "analysis": {
+		            "filter": {
+		                "my_shingle_filter": {
+		                    "type": "shingle",
+		                    "min_shingle_size": 4,
+		                    "max_shingle_size": 7,
+		                    "output_unigrams": false
+		                },
+		                "my_stemmer": {
+		                    "type": "stemmer",
+		                    "name": "english"
+		                }
+		            },
+		            "analyzer": {
+		                "name_analyzer": {
+		                    "tokenizer": "name_tokenizer"
+		                },
+		                "content_analyzer": {
+		                    "type": "custom",
+		                    "tokenizer": "ik_smart",
+		                    "filter": [
+		                        "lowercase",
+		                        "my_stemmer",
+		                        "my_shingle_filter"
+		                    ]
+		                }
+		            },
+		            "tokenizer": {
+		                "name_tokenizer": {
+		                    "type": "pattern",
+		                    "pattern": "\\;"
+		                }
+		            }
+		        }
+		    },
+		    "mappings": {
+		        "projdoc": {
+		            "_all": {
+		                "enabled": "false"
+		            },
+		            "properties": {
+		                "id": {
+		                    "type": "keyword",
+		                    "store": "true"
+		                },
+		                "filename": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectname": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectmember": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "name_analyzer",
+		                    "search_analyzer": "name_analyzer"
+		                },
+		                "allContent": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "researchOne": {
+                            "type": "text",
+                            "term_vector": "no",
+                            "store": "true",
+                            "analyzer": "content_analyzer",
+                            "search_analyzer": "content_analyzer"
+                        },
+		                "createTime": {
+		                    "type": "date",
+		                    "store": "true",
+		                    "format": "yyyy-MM-dd HH:mm:ss.SSS"
+		                }
+		            }
+		        }
+		    }
+		}
+2021-07-06 17:02:37.007 [http-nio-9092-exec-1] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0
+2021-07-06 17:02:37.010 [http-nio-9092-exec-1] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:723- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0,request body:
+{
+		    "settings": {
+		        "number_of_shards": 1,
+		        "number_of_replicas": 0,
+		        "analysis": {
+		            "filter": {
+		                "my_shingle_filter": {
+		                    "type": "shingle",
+		                    "min_shingle_size": 4,
+		                    "max_shingle_size": 7,
+		                    "output_unigrams": false
+		                },
+		                "my_stemmer": {
+		                    "type": "stemmer",
+		                    "name": "english"
+		                }
+		            },
+		            "analyzer": {
+		                "name_analyzer": {
+		                    "tokenizer": "name_tokenizer"
+		                },
+		                "content_analyzer": {
+		                    "type": "custom",
+		                    "tokenizer": "ik_smart",
+		                    "filter": [
+		                        "lowercase",
+		                        "my_stemmer",
+		                        "my_shingle_filter"
+		                    ]
+		                }
+		            },
+		            "tokenizer": {
+		                "name_tokenizer": {
+		                    "type": "pattern",
+		                    "pattern": "\\;"
+		                }
+		            }
+		        }
+		    },
+		    "mappings": {
+		        "projdoc": {
+		            "_all": {
+		                "enabled": "false"
+		            },
+		            "properties": {
+		                "id": {
+		                    "type": "keyword",
+		                    "store": "true"
+		                },
+		                "filename": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectname": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectmember": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "name_analyzer",
+		                    "search_analyzer": "name_analyzer"
+		                },
+		                "allContent": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "researchOne": {
+                            "type": "text",
+                            "term_vector": "no",
+                            "store": "true",
+                            "analyzer": "content_analyzer",
+                            "search_analyzer": "content_analyzer"
+                        },
+		                "createTime": {
+		                    "type": "date",
+		                    "store": "true",
+		                    "format": "yyyy-MM-dd HH:mm:ss.SSS"
+		                }
+		            }
+		        }
+		    }
+		}
+2021-07-06 17:04:54.506 [restartedMain] INFO  net.cnki.EsBbossBootApplication -[logStarting] Line:55 - Starting EsBbossBootApplication using Java 11.0.11 on ZhiPengyu with PID 6748 (D:\Workspaces\eclipse-workspace\EsBbossBoot\target\classes started by ZhiPengyu in D:\Workspaces\eclipse-workspace\EsBbossBoot)
+2021-07-06 17:04:54.511 [restartedMain] INFO  net.cnki.EsBbossBootApplication -[logStartupProfileInfo] Line:659- No active profile set, falling back to default profiles: default
+2021-07-06 17:05:00.878 [restartedMain] INFO  o.frameworkset.spi.remote.http.ClientConfiguration -[makeDefualtClientConfiguration] Line:968- Http Pool[default] config:http.authAccount=null,http.authPassword=null,http.encodedAuthCharset=US-ASCII,http.timeoutConnection=50000,http.timeoutSocket=50000,http.connectionRequestTimeout=50000,http.retryTime=1,http.automaticRetriesDisabled=false,http.backoffAuth=false,http.retryInterval=-1,http.maxLineLength=-1,http.maxHeaderCount=200,http.maxTotal=400,http.soReuseAddress=false,http.soKeepAlive=false,http.timeToLive=3600000,http.keepAlive=3600000,http.defaultMaxPerRoute=200,http.validateAfterInactivity=-1,http.staleConnectionCheckEnabled=false,http.customHttpRequestRetryHandler=null,http.keystore=null,http.keystoreAlias=null,http.keyPassword=null,http.truststore=null,http.truststoreAlias=null,http.trustPassword=null,http.pemCert=null,http.pemtrustedCA=null,http.pemKey=null,http.pemkeyPassword=null,http.hostnameVerifier=null,http.supportedProtocols=TLSv1.2,TLSv1.1,TLSv1,http.httpClientBuilderCallback=null,http.evictExpiredConnections=true,http.routing=null,http.health=null,http.discoverService=null,http.hosts=null,http.failAllContinue=true,http.healthCheckInterval=null,http.discoverServiceInterval=null,http.handleNullOrEmptyHostsByDiscovery=null,http.hosts=null,http.health=null,http.healthCheckInterval=3000,http.failAllContinue=true,http.discoverServiceInterval=10000,http.handleNullOrEmptyHostsByDiscovery=false
+2021-07-06 17:05:01.017 [restartedMain] INFO  o.f.spi.remote.http.proxy.HttpServiceHosts -[after] Line:185- HttpProxy server Http pool[default] healthCheck is disabled,you can set HttpProxy http.healthCheckInterval (>0) and http.health in configfile to enabled healthCheck.
+2021-07-06 17:05:01.017 [restartedMain] INFO  o.f.spi.remote.http.proxy.HttpServiceHosts -[after] Line:211- Discover Http pool[default] is disabled,to enabled set http.discoverService in configfile.
+2021-07-06 17:05:01.018 [restartedMain] INFO  o.frameworkset.spi.remote.http.ClientConfiguration -[makeDefualtClientConfiguration] Line:968- Http Pool[__healthCheck_default] config:http.authAccount=null,http.authPassword=null,http.encodedAuthCharset=US-ASCII,http.timeoutConnection=50000,http.timeoutSocket=50000,http.connectionRequestTimeout=50000,http.retryTime=1,http.automaticRetriesDisabled=false,http.backoffAuth=false,http.retryInterval=-1,http.maxLineLength=-1,http.maxHeaderCount=200,http.maxTotal=500,http.soReuseAddress=false,http.soKeepAlive=false,http.timeToLive=3600000,http.keepAlive=3600000,http.defaultMaxPerRoute=50,http.validateAfterInactivity=-1,http.staleConnectionCheckEnabled=false,http.customHttpRequestRetryHandler=null,http.keystore=null,http.keystoreAlias=null,http.keyPassword=null,http.truststore=null,http.truststoreAlias=null,http.trustPassword=null,http.pemCert=null,http.pemtrustedCA=null,http.pemKey=null,http.pemkeyPassword=null,http.hostnameVerifier=null,http.supportedProtocols=TLSv1.2,TLSv1.1,TLSv1,http.httpClientBuilderCallback=null,http.evictExpiredConnections=true
+2021-07-06 17:05:01.019 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearchHelper -[initDslFileRefreshInterval] Line:327- dslfile.refreshInterval -1 ms
+2021-07-06 17:05:01.019 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearchHelper -[initDslFileRefreshInterval] Line:328- dslfile.dslMappingDir null
+2021-07-06 17:05:01.034 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearch -[configureWithConfigContext] Line:268- Start Elasticsearch Datasource[default] from springboot[true]:{"elasticPassword":"","elasticsearch.scrollBlockedWaitTimeout":"0","elasticsearch.client":"restful","elasticsearch.timeZone":"Asia/Shanghai","elasticsearch.failAllContinue":"true","elasticUser":"","elasticsearch.dateFormat":"yyyy.MM.dd","elasticsearch.sliceScrollThreadCount":"50","elasticsearch.showTemplate":"true","elasticsearch.ttl":"2d","elasticsearch.scrollThreadQueue":"200","elasticsearch.version":"7.0.0","elasticsearch.healthCheckInterval":"3000","elasticsearch.sliceScrollBlockedWaitTimeout":"0","elasticsearch.scrollThreadCount":"50","elasticsearch.includeTypeName":"false","elasticsearch.rest.hostNames":"127.0.0.1:9200","elasticsearch.sliceScrollThreadQueue":"100","elasticsearch.discoverHost":"false","elasticsearch.httpPool":"default"}
+2021-07-06 17:05:01.036 [restartedMain] INFO  o.f.elasticsearch.TimeBasedIndexNameBuilder -[configure] Line:77 - dateFormatString = yyyy.MM.dd,timeZoneString=Asia/Shanghai,indexPrefix=null
+2021-07-06 17:05:01.037 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearchHelper -[booter] Line:218- Geo ipinfo config {"ip.cachesize":"10000","ip.database":"","ip.serviceUrl":"","ip.asnDatabase":"","ip.ispConverter":"","ip.ip2regionDatabase":""},from springboot:true
+2021-07-06 17:05:01.038 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearch -[start] Line:439- Start ElasticSearch rest client:127.0.0.1:9200
+2021-07-06 17:05:01.040 [restartedMain] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[init] Line:305- Start Elasticsearch healthCheck thread,you can set elasticsearch.healthCheckInterval=-1 in ElasticSearch Configs to disable healthCheck thread.
+2021-07-06 17:05:01.090 [restartedMain] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[handleResponse] Line:242- Elasticsearch Server Info:
+{
+  "name" : "ZHIPENGYU",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "pxb9DG8tS3-d_NrOaV-EDw",
+  "version" : {
+    "number" : "7.13.2",
+    "build_flavor" : "default",
+    "build_type" : "zip",
+    "build_hash" : "4d960a0733be83dd2543ca018aa4ddc42e956800",
+    "build_date" : "2021-06-10T21:01:55.251515791Z",
+    "build_snapshot" : false,
+    "lucene_version" : "8.8.2",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+2021-07-06 17:05:01.109 [restartedMain] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[init] Line:325- Discover Elasticsearch Host is disabled,to enabled set elasticsearch.discoverHost=true  in ElasticSearch Configs.
+2021-07-06 17:05:01.110 [restartedMain] INFO  org.frameworkset.elasticsearch.ElasticSearch -[start] Line:444- ElasticSearch rest client started.
+2021-07-06 17:05:01.398 [restartedMain] INFO  net.cnki.EsBbossBootApplication -[logStarted] Line:61 - Started EsBbossBootApplication in 7.543 seconds (JVM running for 10.185)
+2021-07-06 17:24:28.789 [http-nio-9092-exec-1] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0
+2021-07-06 17:24:28.829 [http-nio-9092-exec-1] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:723- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0,request body:
+{
+		    "settings": {
+		        "number_of_shards": 1,
+		        "number_of_replicas": 0,
+		        "analysis": {
+		            "filter": {
+		                "my_shingle_filter": {
+		                    "type": "shingle",
+		                    "min_shingle_size": 4,
+		                    "max_shingle_size": 7,
+		                    "output_unigrams": false
+		                },
+		                "my_stemmer": {
+		                    "type": "stemmer",
+		                    "name": "english"
+		                }
+		            },
+		            "analyzer": {
+		                "name_analyzer": {
+		                    "tokenizer": "name_tokenizer"
+		                },
+		                "content_analyzer": {
+		                    "type": "custom",
+		                    "tokenizer": "ik_smart",
+		                    "filter": [
+		                        "lowercase",
+		                        "my_stemmer",
+		                        "my_shingle_filter"
+		                    ]
+		                }
+		            },
+		            "tokenizer": {
+		                "name_tokenizer": {
+		                    "type": "pattern",
+		                    "pattern": "\\;"
+		                }
+		            }
+		        }
+		    },
+		    "mappings": {
+		        "projdoc": {
+		            "_all": {
+		                "enabled": "false"
+		            },
+		            "properties": {
+		                "id": {
+		                    "type": "keyword",
+		                    "store": "true"
+		                },
+		                "filename": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectname": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectmember": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "name_analyzer",
+		                    "search_analyzer": "name_analyzer"
+		                },
+		                "allContent": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "researchOne": {
+                            "type": "text",
+                            "term_vector": "no",
+                            "store": "true",
+                            "analyzer": "content_analyzer",
+                            "search_analyzer": "content_analyzer"
+                        },
+		                "createTime": {
+		                    "type": "date",
+		                    "store": "true",
+		                    "format": "yyyy-MM-dd HH:mm:ss.SSS"
+		                }
+		            }
+		        }
+		    }
+		}
+2021-07-06 17:37:53.628 [http-nio-9092-exec-3] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0
+2021-07-06 17:37:53.631 [http-nio-9092-exec-3] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:725- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc?pretty,retry:0
+2021-07-06 17:37:53.888 [http-nio-9092-exec-3] INFO  o.f.elasticsearch.client.ElasticSearchRestClient -[execute] Line:723- ElasticSearch http request endpoint:http://127.0.0.1:9200/projdoc,retry:0,request body:
+{
+		    "settings": {
+		        "number_of_shards": 1,
+		        "number_of_replicas": 0,
+		        "analysis": {
+		            "filter": {
+		                "my_shingle_filter": {
+		                    "type": "shingle",
+		                    "min_shingle_size": 4,
+		                    "max_shingle_size": 7,
+		                    "output_unigrams": false
+		                },
+		                "my_stemmer": {
+		                    "type": "stemmer",
+		                    "name": "english"
+		                }
+		            },
+		            "analyzer": {
+		                "name_analyzer": {
+		                    "tokenizer": "name_tokenizer"
+		                },
+		                "content_analyzer": {
+		                    "type": "custom",
+		                    "tokenizer": "ik_smart",
+		                    "filter": [
+		                        "lowercase",
+		                        "my_stemmer",
+		                        "my_shingle_filter"
+		                    ]
+		                }
+		            },
+		            "tokenizer": {
+		                "name_tokenizer": {
+		                    "type": "pattern",
+		                    "pattern": "\\;"
+		                }
+		            }
+		        }
+		    },
+		    "mappings": {
+		        "projdoc": {
+		            "_all": {
+		                "enabled": "false"
+		            },
+		            "properties": {
+		                "id": {
+		                    "type": "keyword",
+		                    "store": "true"
+		                },
+		                "filename": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectname": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "projectmember": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "name_analyzer",
+		                    "search_analyzer": "name_analyzer"
+		                },
+		                "allContent": {
+		                    "type": "text",
+		                    "term_vector": "no",
+		                    "store": "true",
+		                    "analyzer": "content_analyzer",
+		                    "search_analyzer": "content_analyzer"
+		                },
+		                "researchOne": {
+                            "type": "text",
+                            "term_vector": "no",
+                            "store": "true",
+                            "analyzer": "content_analyzer",
+                            "search_analyzer": "content_analyzer"
+                        },
+		                "createTime": {
+		                    "type": "date",
+		                    "store": "true",
+		                    "format": "yyyy-MM-dd HH:mm:ss.SSS"
+		                }
+		            }
+		        }
+		    }
+		}
